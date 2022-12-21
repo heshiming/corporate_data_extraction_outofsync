@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y git vim ninja-build poppler-utils defau
     && rm -rf /var/lib/apt/lists/*
 
 # Install mmdetection
-RUN conda clean --all
+RUN conda clean --all -y
 RUN git clone --branch v1.2.0 https://github.com/open-mmlab/mmdetection.git /mmdetection
 WORKDIR /mmdetection
 ENV FORCE_CUDA="1"

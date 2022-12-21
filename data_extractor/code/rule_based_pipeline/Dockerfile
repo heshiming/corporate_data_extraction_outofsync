@@ -17,6 +17,8 @@ RUN apt-get update
 #RUN apt-get install -y python3 python3-pip gfortran libopenblas-dev liblapack-dev libpng-dev libfreetype-dev libpng12-0 libfontconfig
 RUN apt-get install -y python3 python3-pip gfortran libopenblas-dev liblapack-dev libpng-dev libfreetype-dev libfontconfig
 
+COPY ./rule_based_pipeline/requirements.txt /app/code/rule_based_pipeline/
+RUN pip install -r /app/code/rule_based_pipeline/requirements.txt
 COPY ./rule_based_pipeline /app/code/rule_based_pipeline
 RUN chmod u+x /app/code/rule_based_pipeline/rule_based_pipeline/pdftohtml_mod/pdftohtml_mod
 

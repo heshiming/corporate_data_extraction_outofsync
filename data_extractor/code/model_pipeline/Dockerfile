@@ -8,6 +8,8 @@ ENV TORCH_CUDA_ARCH_LIST="3.7 6.0 6.1 7.0+PTX"
 #ENV http_proxy="http://proxy-ids-poc-d.we1.azure.aztec.cloud.allianz:80"
 #ENV https_proxy="http://proxy-ids-poc-d.we1.azure.aztec.cloud.allianz:80"
 
+RUN apt-get install -y dirmngr
+
 RUN apt-key del 3bf863cc
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
 
