@@ -1,0 +1,4 @@
+sanic==22.9.1
+sanic-ext==22.9.1
+orjson==3.8.3
+huey==2.4.4
